@@ -1,0 +1,476 @@
+@charset "UTF-8";
+
+/*!
+ * Yourwebsitewala v1.0.0 (https://yourwebsitewala.com/)
+ * Copyright 2019-2022 The Yourwebsitewala Authors
+ * Licensed under Yourwebsitewala (https:Yourwebsitewala)
+ */
+ 
+ /* -------Basic CSS Starts--------- */
+ :root {
+    --yww-primary-color:#001f5b;
+    --yww-secondary-color:#f3931c;
+    --yww-bg-color:#DFE7EC;
+    --yww-font-color:#24232c;
+    --yww-style-color:#946454;
+    --yww-style-color-2:#F2604E;
+    --yww-style-color-3:#001847;
+    --yww-white-color:#ffffff;
+    --yww-font-family:'Lato', sans-serif;
+    --yww-heading-font-family:'Roboto', sans-serif;
+    --yww-font-size:16px;
+    --yww-body-line-height:24px;
+    --yww-body-font-weight:400;
+    --yww-font-weight-semibold:600;
+    --yww-font-weight-bold:800;
+    --yww-body-bg:var(--yww-white-color);
+    --yww-gradient:linear-gradient(90deg, hsla(33, 90%, 53%, 1) 14%, hsla(203, 25%, 90%, 1) 40%, hsla(240, 41%, 28%, 1) 100%);
+}
+html,
+body {
+    margin: 0;
+    padding:0;
+    font-family: var(--yww-font-family);
+    font-size: var(--yww-font-size);
+    font-weight: var(--yww-body-font-weight);
+    line-height: var(--yww-body-line-height);
+    color: var(--yww-font-color);
+    background-color: var(--yww-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+h1,.h1,h2,.h2,
+h3,.h3,h4,.h4,
+h5,.h5,h6,.h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight:var(--yww-font-weight-bold);
+  line-height: 1.4;
+  color:var(--yww-font-color);
+  font-family:var(--yww-heading-font-family);
+  text-transform: capitalize;
+}
+
+h1,
+.h1 {
+  font-size:3.75rem;
+}
+
+@media (min-width: 1200px) {
+  h1,
+  .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size:3.125rem;
+}
+
+@media (min-width: 1200px) {
+
+  h2,
+  .h2 {
+    font-size: 2.625rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+.h4 {
+  font-size:1.875rem;
+}
+
+h5,
+.h5 {
+  font-size:1.25rem;
+}
+
+h6,
+.h6 {
+  font-size:0.875rem;
+}
+
+a {
+    color: var(--yww-primary-color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--yww-secondary-color);
+}
+button:focus{
+  outline:0;
+  box-shadow:none;
+}
+img, svg {
+  max-width:100%;
+}
+/* -------Basic CSS Ends--------- */
+
+/* -------CSS For Header Section Starts--------- */
+.yww-header {
+    z-index: 1020;
+    background:var(--yww-white-color);
+}
+.navbar-brand {
+  font-size: 1.25rem;
+  white-space: nowrap;
+  padding: 0;
+  display: block;
+  margin: 0;
+  max-width: 13rem;
+  width: 100%;
+}
+.navbar .navbar-nav .nav-link {
+  color:var(--yww-font-color);
+  font-weight:var(--yww-font-weight-semibold);
+  padding:0.5rem 1rem;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--yww-primary-color);
+  text-decoration:underline;
+  text-decoration-color:var(--yww-secondary-color);;
+}
+.navbar .navbar-nav .nav-link.dropdown-toggle {
+  text-decoration:none;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  content: "\f282";
+  border: 0;
+  font-size: 0.875rem;
+}
+.yww--primary--btn,
+.yww--secondary-btn,
+.yww-no-bg-btn{
+  background-color: var(--yww-primary-color);
+  color:var(--yww-white-color);
+  min-width: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight:var(--yww-font-weight-semibold);
+  cursor: pointer;
+  border: 0.125rem solid transparent;
+  padding: 0.5rem 1rem;
+}
+.yww--primary--btn:hover,
+.yww--secondary-btn:hover {
+  border-color:var(--yww-primary-color);
+  background-color:transparent;
+  color:var(--yww-font-color);
+}
+.yww--secondary-btn {
+  background-color: var(--yww-secondary-color);
+}
+.yww-no-bg-btn {
+  border-color:var(--yww-primary-color);
+  background-color:transparent;
+  color:var(--yww-font-color);
+}
+.yww-no-bg-btn:hover {
+  background-color: var(--yww-primary-color);
+  color:var(--yww-white-color);
+}
+.dropdown-menu {
+  border-radius:0;
+  border:0.063rem solid var(--yww-primary-color);
+  padding: 0;
+}
+@media screen and (max-width:991.98px) {
+  .navbar-expand-lg .navbar-collapse .navbar-nav .nav-item {
+    border-bottom: 0.063rem solid rgba(0, 0, 0, 0.1);
+    padding: 0.313rem 1.875rem;
+    position: relative;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    -webkit-box-shadow: 0px 0.625rem 1.875rem rgba(83, 88, 93, 0.2);
+    box-shadow: 0px 0.625rem 1.875rem rgba(83, 88, 93, 0.2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    border-top: 0.063rem solid rgba(0, 0, 0, 0.1);
+  }
+}
+.dropdown-item {
+  font-weight: 500;
+  color:var(--yww-font-color);
+}
+.dropdown-menu li {
+  border-bottom:0.063rem solid var(--yww-primary-color);
+}
+.dropdown-menu li:last-child {
+  border-bottom:0;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: var(--yww-white-color);
+  background-color: var(--yww-primary-color);
+}
+.navbar-toggler {
+  padding:0rem;
+  font-size:2rem;
+  line-height: 1;
+  color:var(--yww-primary-color);
+  background-color:transparent;
+  border:0.2rem solid var(--yww-primary-color);
+  border-radius: 0;
+  transition: var(--bs-navbar-toggler-transition);
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow:none;
+}
+/* -------CSS For Header Section Ends--------- */
+
+/* -------CSS for Hero Section Home Page Starts--------- */
+.yww_hero_sec {
+   background:var(--yww-white-color);
+   padding:8rem 0 0rem 0;
+}
+@media screen and (max-width:991.99px) {
+  .yww_hero_sec {
+    padding:6rem 0 0rem 0;
+ }   
+}
+.yww--hero--title {
+  font-weight: 900;
+  font-size:3.3rem;
+  line-height: 1.2;
+}
+.yww--hero--content {
+  padding: 3rem 0 0 0;
+}
+@media screen and (max-width:991.99px) {
+  .yww--hero--content {
+    padding:1rem 0 0 0;
+  } 
+}
+.yww--change-color {
+  color:var(--yww-secondary-color);
+}
+@media screen and (max-width:991.98px) {
+  .yww--hero--title {
+    font-size:2.3rem;
+  }
+}
+@media screen and (max-width:400px) {
+  .yww--hero--title {
+    font-size:2rem;
+  }
+}
+.yww--hero--para {
+  font-size: 1.125rem;
+  line-height: 1.7rem;
+  padding:1rem 0;
+}
+/* -------CSS for Hero Section Home Page Ends--------- */
+
+/* -------CSS For Modal Section Starts--------- */
+.modal-header {
+  background-color: var(--yww-primary-color);
+  border-radius:0;
+}
+.modal-header .btn-close {
+  border: 0;
+  border-radius: 0;
+  opacity: 1;
+  background-color:var(--yww-white-color);
+  color:var(--yww-primary-color);
+  padding: 0;
+  line-height: 1rem;
+  font-size: 2rem;
+  background:none;
+}
+.modal-header .btn-close:focus {
+  outline: 0;
+  box-shadow:none;
+}
+.modal-body .form-control {
+  background: transparent;
+  color:var(--yww-font-color);
+  padding-left: 0;
+  border-radius: 0;
+  border-bottom:0.125rem solid var(--yww-primary-color);
+  border-top:0;
+  border-right:0;
+  border-left:0;
+}
+.modal-body .form-control:focus {
+  box-shadow:none;
+  outline:0;
+  border-color:transparent;
+}
+.modal-body .form-control ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height:0.125rem;
+  background-color:var(--yww-secondary-color);
+  -webkit-transition: all 0.6s cubic-bezier(0.42, 0, 0, 0.97);
+  transition: all 0.6s cubic-bezier(0.42, 0, 0, 0.97);
+}
+.modal-body input.form-control:focus ~ .focus-border, 
+.modal-body textarea.form-control:focus ~ .focus-border {
+  width: 100%;
+}
+/* -------CSS For Modal Section Ends--------- */
+
+/* -------CSS For Intro Section Starts--------- */
+.yww_intro_sec {
+  background-color:var(--yww-primary-color);
+  padding:5rem 0;
+}
+@media screen and (max-width:991.99px){
+  .intro--service-text h2 {
+    font-size:2.3rem;
+  }
+}
+@media screen and (max-width:575.99px){
+  .intro--service-text h2 {
+    font-size:2rem;
+  }
+}
+@media screen and (max-width:575.99px) {
+  .intro--service-col {
+    width:100%;
+    max-width:70%;
+    margin-bottom:2.5rem;
+  }
+}
+.intro--service_icon {
+  display:inline-block;
+  background:var(--yww-white-color);
+  max-width: 30%;
+  text-align: center;
+  border-radius: 0.125rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 3rem;
+  font-size: 1.3rem;
+  box-shadow: 0px 0.2rem 0.5rem rgb(35, 35, 35);
+  position: absolute;
+  left: 1rem;
+  top: -1rem;
+  z-index: 10;
+}
+.intro--service_icon i {
+  color: var(--yww-primary-color);
+}
+.intro--service_icon .fa-drafting-compass {
+  color:var(--yww-style-color);
+}
+.intro--service_icon .fa-file-code {
+  color:var(--yww-style-color-2);
+}
+.intro--service-col .list-group-item {
+  color: var(--yww-white-color);
+  border-color:var(--yww-white-color);
+  font-weight:var(--yww-font-weight-semibold);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+} 
+.intro--service-col li:last-child .list-group-item {
+  border-bottom: 0;
+}
+.intro--service-col .list-group-item:hover {
+  color: var(--yww-secondary-color);
+  border-color:var(--yww-secondary-color);
+}
+.intro--service-col .list-group {
+  border: 0.063rem solid var(--yww-white-color);
+  box-shadow: 0px 0.2rem 0.5rem rgb(35, 35, 35);
+  background-color:var(--yww-primary-color);
+  padding-top: 1.5rem;
+}
+.development--service .list-group{
+  background-color:var(--yww-style-color-3);
+  margin:0 1.2rem  1.2rem;
+}
+@media screen and (max-width:575.99px) {
+  .development--service .list-group {
+    margin:0;
+  } 
+}
+.development--service .intro--service_icon {
+  left: 2rem;
+}
+@media screen and (max-width:575.99px){
+  .development--service .intro--service_icon {
+    left:1rem;
+  }
+}
+/* -------CSS For Intro Section Ends--------- */
+
+/* -------CSS For Development Page Starts--------- */
+.yww_page_banner{
+  background-image: url(../images/page-banner.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  z-index:10;
+  margin-top:4rem;
+  padding:4.5rem 0;
+}
+.yww_page_banner:before{
+  content: "";
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:var(--yww-font-color);
+  opacity:.8;
+  z-index:-1;
+}
+.yww--page--banner--title {
+  color:var(--yww-white-color);
+  font-weight: 900;
+  font-size: 3.3rem;
+  line-height: 1.2;
+}
+.yww--page--banner--para{
+  color:var(--yww-white-color);
+  font-size: 1.125rem;
+  line-height: 1.7rem;
+  padding-bottom:1rem;
+}
+.yww-page--banner--breadcrumb li,
+.yww-page--banner--breadcrumb li.active,
+.yww-page--banner--breadcrumb li a {
+  color:var(--yww-white-color);
+}
+.yww--page--banner--content .yww--primary--btn {
+  display:inline-block;
+  background-color:var(--yww-white-color);
+  border-color:var(--yww-white-color);
+  color:var(--yww-font-color);
+  min-width: 10rem;
+  padding: 0.8rem 1rem;
+}
+.yww--page--banner--content .yww--primary--btn:hover {
+  background-color:transparent;
+  color:var(--yww-white-color);
+}
+.yww--page--banner--content nav {
+  padding: 2rem 0 1rem;
+}
